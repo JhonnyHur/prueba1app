@@ -1,0 +1,37 @@
+_format_version: "3.0"
+
+services:
+  - name: usuarios-service
+    url: http://host.docker.internal:4001
+    routes:
+      - name: usuarios-route
+        paths:
+          - /usuarios
+
+  - name: vehiculosconsultas-service
+    url: http://host.docker.internal:4006
+    routes:
+      - name: vehiculosconsultas-route
+        paths:
+          - /vehiculosconsultas
+
+  - name: vehiculoscommands-service
+    url: http://host.docker.internal:4005
+    routes:
+      - name: vehiculoscommands-route
+        paths:
+          - /vehiculoscommands
+
+  - name: ventas-service
+    url: http://host.docker.internal:4004
+    routes:
+      - name: ventas-route
+        paths:
+          - /ventas
+
+  - name: contratos-service
+    url: http://host.docker.internal:4003
+    routes:
+      - name: contratos-route
+        paths:
+          - /contratos
